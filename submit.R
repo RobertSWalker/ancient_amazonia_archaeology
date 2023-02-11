@@ -32,7 +32,8 @@ cl <- makePSOCKcluster(15)
 registerDoParallel(cl)
 fit.rf <- train( type ~ ., data = df[, -c(2,3)],
                  method="rf",
-                 trControl=control, importance=T,
+                 trControl=control, 
+                 importance=T,
                  metric = "AUC",
                  ntree=1000, 
                  tuneLength = 100,
@@ -47,10 +48,6 @@ for(stat in c('logLoss',    'AUC' ,       'prAUC',      'Accuracy'  , 'Kappa' , 
               'Mean_Sensitivity', 'Mean_Specificity'  ,'Mean_Pos_Pred_Value',  'Mean_Neg_Pred_Value',
               'Mean_Precision',  'Mean_Recall',  'Mean_Detection_Rate'  ,'Mean_Balanced_Accuracy')) {
   print(plot(fit.rf, metric=stat))}
-
-#confusion matrix
-confusionMatrix(fit.rf)
-confusionMatrix(fit.rf$pred$pred, fit.rf$pred$obs)
 
 #plots
 ggplot(df, aes(x = type, y = pest, color=type)) +
