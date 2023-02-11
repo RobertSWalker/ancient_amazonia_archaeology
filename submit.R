@@ -14,7 +14,7 @@ sb <- spatialBlock(speciesData = spdf,
                    iteration = 100, # find evenly dispersed folds
                    biomod2Format = F,
                    seed = 99,
-                   xOffset = 0, # shift the blocks horizontally
+                   xOffset = 0, 
                    yOffset = 0)
 
 # spatial cross validation folds
