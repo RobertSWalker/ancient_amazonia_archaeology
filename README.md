@@ -3,7 +3,7 @@ This project uses machine learning to model and detect archaeological sites in A
 
 ## Publication
 Scripts are for the 2023 publication: Walker RS, JR Ferguson, A Olmeda, MJ Hamilton, J Elghammer, B Buchanan. Predicting the geographic distribution of ancient Amazonian archaeological sites with machine learning. PeerJ 11:e15137.
-https://peerj.com/articles/15137/
+https://peerj.com/articles/15137/. There is an accompanying website with locations, images, and machine learning predictions here https://robert-walker.shinyapps.io/ggshiny/.
 
 ## Data
 The location data and bioclimatic and soil variables etc. that are used for prediction are available in submit.csv. 
